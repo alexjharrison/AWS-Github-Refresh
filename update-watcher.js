@@ -17,7 +17,7 @@ app.listen(PORT,(err)=>{
 app.post("/update",(req,res)=>{
     if(req.body.ref==="refs/heads/master")
     {
-        var repo = req.repository.name;
+        var repo = req.body.repository.name;
         console.log("master branch");
         cmd.get(
             `
