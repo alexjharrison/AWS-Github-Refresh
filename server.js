@@ -18,10 +18,12 @@ app.post("/update",(req,res)=>{
     console.log(req.body);
     if(req.body.ref==="refs/heads/master")
     {
+        console.log("not master branch");
         res.send(req.body);
     }
     else {
         console.log("not master branch");
+        res.send(req.body)
     }
     
 })
