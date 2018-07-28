@@ -16,5 +16,12 @@ app.listen(PORT,(err)=>{
 
 app.post("/update",(req,res)=>{
     console.log(req.body);
-    res.send(req.body);
+    if(req.body.ref==="refs/heads/master")
+    {
+        res.send(req.body);
+    }
+    else {
+        console.log("not master branch");
+    }
+    
 })
