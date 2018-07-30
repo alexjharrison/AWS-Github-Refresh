@@ -24,6 +24,7 @@ app.post("/update",(req,res)=>{
             cd ../${repo}
             sudo forever stop server.js
             git pull
+            npm i
             sudo forever start server.js
             `,
             function(err,data,stderr){
